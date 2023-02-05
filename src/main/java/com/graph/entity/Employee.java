@@ -2,7 +2,6 @@ package com.graph.entity;
 
 import lombok.Data;
 import lombok.ToString;
-import org.apache.catalina.Manager;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,8 +9,8 @@ import java.util.List;
 
 @ToString
 @Data
-@Document(collection = "user")
-public class User {
+@Document(collection = "employees")
+public class Employee {
 
     @Id
     private String id;
@@ -21,7 +20,6 @@ public class User {
     private String password;
     private List<String> roles;
     private String organizationId;
-    private List<Manager> managers;
     private boolean isUsingMFA;
     private String secret;
     private boolean isAlreadyRegistered;
@@ -45,5 +43,3 @@ public class User {
     private boolean isSessionRecording;
 
 }
-
-
